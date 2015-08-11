@@ -13,11 +13,31 @@
 # Imports
 
 # Body
+def has_no_e(word):
+	if "e" not in word:
+		return True
+	False
+
+def count_no_e():
+	with open("words.txt") as in_fin:
+		with_e = 0
+		without_e = 0
+		for line in in_fin:
+			if has_no_e(line):
+				without_e += 1
+			else:
+				with_e += 1
+
+	# get decimal then convert to percentage
+	decimal = (float(without_e) / (float(with_e) + float(without_e)))
+	percentage = round(decimal*100,1)
+	print(str(percentage) + "%")
 
 
 ##############################################################################
 def main():
-    pass  # Call your function(s) here.
+
+    count_no_e()
 
 if __name__ == '__main__':
     main()

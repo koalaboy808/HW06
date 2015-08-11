@@ -19,11 +19,28 @@
 # Imports
 
 # Body
+def avoids(word, forbidden):
+	if forbidden not in word:
+		return True
+	False
+
+def avoids_total():
+	forbidden = raw_input("Input a forbidden string-- ")
+	is_forbidden = 0
+
+	with open("words.txt") as fin:
+		for line in fin:
+			if avoids(line, forbidden):
+				is_forbidden += 1
+	print(is_forbidden)
+
+# not sure how to do number three yet... is this some permutation thing??
+
 
 
 ##############################################################################
 def main():
-    pass  # Call your function(s) here.
+    avoids_total()
 
 if __name__ == '__main__':
     main()
